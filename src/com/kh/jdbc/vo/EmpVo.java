@@ -1,5 +1,6 @@
 package com.kh.jdbc.vo;
 
+import java.math.BigDecimal;
 import java.sql.Date;
 
 public class EmpVo {
@@ -8,11 +9,11 @@ public class EmpVo {
     private String job; //직무
     private int mgr; // 매니저
     private Date date;
-    private double sal; // 급여
-    private double comm; // 성과급
+    private BigDecimal sal; // 급여
+    private BigDecimal comm; // 성과급
     private int deptNo; // 부서번호
 
-    public EmpVo(int no, String name, String job, int mgr, Date date, double sal, double comm, int deptNo) {
+    public EmpVo(int no, String name, String job, int mgr, Date date, BigDecimal sal, BigDecimal comm, int deptNo) {
         this.no = no;
         this.name = name;
         this.job = job;
@@ -67,19 +68,19 @@ public class EmpVo {
         this.date = date;
     }
 
-    public double getSal() {
+    public BigDecimal getSal() {
         return sal;
     }
 
-    public void setSal(double sal) {
+    public void setSal(BigDecimal sal) {
         this.sal = sal;
     }
 
-    public double getComm() {
+    public BigDecimal getComm() {
         return comm;
     }
 
-    public void setComm(double comm) {
+    public void setComm(BigDecimal comm) {
         this.comm = comm;
     }
 
